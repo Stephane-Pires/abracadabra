@@ -11,15 +11,15 @@
         owner: "{{ item.owner | default('root') }}"
         group: "{{ item.group | default('root') }}"
       loop:
-        - path: /Users/{{ ansible_user }}/Documents/Projects
-          owner: "{{ ansible_user }}"
-          group: "{{ ansible_user }}"
-        - path: /Users/{{ ansible_user }}/Documents/Rapports
-          owner: "{{ ansible_user }}"
-          group: "{{ ansible_user }}"
-        - path: /Users/{{ ansible_user }}/Documents/RunJS
-          owner: "{{ ansible_user }}"
-          group: "{{ ansible_user }}"
-        - path: "/Users/{{ ansible_user }}/Pictures/Screenshots"
-          owner: "{{ ansible_user }}"
-          group: "{{ ansible_user }}"
+        - path: /Users/{{ ansible_user_id }}/Documents/Projects
+          owner: "{{ ansible_user_id }}"
+          group: "{{ ansible_user_id }}"
+        - path: /Users/{{ ansible_user_id }}/Documents/Rapports
+          owner: "{{ ansible_user_id }}"
+          group: "{{ ansible_user_id }}"
+        - path: /Users/{{ ansible_user_id }}/Documents/RunJS
+          owner: "{{ ansible_user_id }}"
+          group: "{{ ansible_user_id }}"
+        - path: "/Users/{{ ansible_user_id }}/Pictures/Screenshots"
+          owner: "{{ ansible_user_id }}"
+          group: "{{ ansible_user_id }}"
