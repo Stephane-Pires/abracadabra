@@ -2,6 +2,10 @@
 - name: Create folder tree structure
   hosts: localhost
   tasks:
+    - name: Debug user environment variable
+      ansible.builtin.debug:
+        msg: "lookup('env', 'USER') evaluates to: {{ lookup('env', 'USER') }}"
+
     - name: Create folders in the operating system
       ansible.builtin.file:
         path: "{{ item.path }}"
