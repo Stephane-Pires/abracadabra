@@ -1,7 +1,7 @@
 # tap "flother/taps"
 # tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
+# tap "homebrew/cask-font" DEPRECATED
 tap "homebrew/services"
 # tap "koekeishiya/formulae"
 # Utilitaires
@@ -67,6 +67,6 @@ cask "docker"
 cask "visual-studio-code"
 cask "httpie"
 cask "gitkraken"
-cask "warp"
+# cask "warp"
 cask "kitty"
 cask "runjs"
