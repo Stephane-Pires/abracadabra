@@ -1,17 +1,9 @@
-# Description
+# Abracadabra
 
-This project helps to install tools and dependencies needed when configuring a new project
+## Description
 
-// install brew
-// install git
-// git download my-config
-// run install.sh
+## Run
 
-1. `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-2. `Follow the terminal instruction from brew`
-3. `brew install git`
+Download the bash script that install the system `init.sh`
 
-[ ] : Install using Brewfile `brew bundle install`
-[ ] : Create folder structure
-[ ] : Use ChezMoi to get the DotFiles
-[ ] : Configure MacOS Default List
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Stephane-Pires/abracadabra/refs/heads/main/init.sh)"`
