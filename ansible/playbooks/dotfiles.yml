@@ -1,0 +1,81 @@
+---
+- name: Install dotfiles
+  hosts: localhost
+  become: true
+  tasks:
+    # Ensure the dotfiles directory exists
+    # - name: Ensure dotfiles directory exists
+    #   ansible.builtin.file:
+    #     path: "~/dotfiles"
+    #     state: directory
+    #     mode: "0755"
+
+    # # Copy .bashrc
+    # - name: Copy .bashrc to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.bashrc"
+    #     dest: "~/.bashrc"
+    #     mode: "0644"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
+
+    # # Copy .zshrc
+    # - name: Copy .zshrc to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.zshrc"
+    #     dest: "~/.zshrc"
+    #     mode: "0644"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
+
+    # # Copy .gitconfig
+    # - name: Copy .gitconfig to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.gitconfig"
+    #     dest: "~/.gitconfig"
+    #     mode: "0644"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
+
+    # # Copy .vimrc
+    # - name: Copy .vimrc to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.vimrc"
+    #     dest: "~/.vimrc"
+    #     mode: "0644"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
+
+    # # Copy .config/nvim
+    # - name: Copy .config/nvim to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.config/nvim"
+    #     dest: "~/.config/nvim"
+    #     mode: "0755"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
+
+    # # Copy .config/i3
+    # - name: Copy .config/i3 to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.config/i3"
+    #     dest: "~/.config/i3"
+    #     mode: "0755"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
+
+    # # Optionally, if you have a custom SSH config
+    # - name: Copy .ssh/config to home directory
+    #   ansible.builtin.copy:
+    #     src: "~/dotfiles/.ssh/config"
+    #     dest: "~/.ssh/config"
+    #     mode: "0600"
+    #     owner: "{{ ansible_user }}"
+    #     group: "{{ ansible_user }}"
+    #     backup: yes # Optional: Backup existing file before overwriting
