@@ -1,7 +1,6 @@
 ---
 - name: Create folder tree structure
   hosts: localhost
-  become: true
   tasks:
     - name: Create folders in the operating system
       ansible.builtin.file:
