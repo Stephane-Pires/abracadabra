@@ -10,15 +10,15 @@
         owner: "{{ item.owner | default('root') }}"
         group: "{{ item.group | default('root') }}"
       loop:
-        - path: /Users/{{ ansible_env.USER }}/Documents/Projects
-          owner: "{{ ansible_env.USER }}"
-          group: "{{ ansible_env.USER }}"
-        - path: /Users/{{ ansible_env.USER }}/Documents/Rapports
-          owner: "{{ ansible_env.USER }}"
-          group: "{{ ansible_env.USER }}"
-        - path: /Users/{{ ansible_env.USER }}/Documents/RunJS
-          owner: "{{ ansible_env.USER }}"
-          group: "{{ ansible_env.USER }}"
-        - path: "/Users/{{ ansible_env.USER }}/Pictures/Screenshots"
-          owner: "{{ ansible_env.USER }}"
-          group: "{{ ansible_env.USER }}"
+        - path: /Users/{{ lookup('env', 'USER') }}/Documents/Projects
+          owner: "{{ lookup('env', 'USER') }}"
+          group: "{{ lookup('env', 'USER') }}"
+        - path: /Users/{{ lookup('env', 'USER') }}/Documents/Rapports
+          owner: "{{ lookup('env', 'USER') }}"
+          group: "{{ lookup('env', 'USER') }}"
+        - path: /Users/{{ lookup('env', 'USER') }}/Documents/RunJS
+          owner: "{{ lookup('env', 'USER') }}"
+          group: "{{ lookup('env', 'USER') }}"
+        - path: "/Users/{{ lookup('env', 'USER') }}/Pictures/Screenshots"
+          owner: "{{ lookup('env', 'USER') }}"
+          group: "{{ lookup('env', 'USER') }}"
