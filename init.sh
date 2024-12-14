@@ -18,8 +18,6 @@ set -e  # Exit immediately if a command exits with a non-zero status.
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
-
-https://github.com/Stephane-Pires/abracadabra.git
 ## Install Brewfile
     echo "Installing Brewfile..."
     brew bundle install
