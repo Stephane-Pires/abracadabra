@@ -22,3 +22,7 @@ set -e  # Exit immediately if a command exits with a non-zero status.
     echo "Installing Brewfile..."
     brew bundle install
 
+## Run Ansible 
+    echo "Running Ansible..."
+    ansible-pull -U https://github.com/Stephane-Pires/abracadabra.git -C main ansible/site.yml
+
