@@ -5,69 +5,69 @@
   tasks:
     # DOCK Configuration
     - name: Set dock icon size
-      ansible.builtin.command: defaults write com.apple.dock "tilesize" -int "61"
+      ansible.builtin.shell: defaults write com.apple.dock "tilesize" -int "61" && killall Dock
 
     - name: Set minimize animation effect to scale
-      ansible.builtin.command: defaults write com.apple.dock "mineffect" -string "scale"
+      ansible.builtin.shell: defaults write com.apple.dock "mineffect" -string "scale" && killall Dock
 
     - name: Set active applications only in dock
-      ansible.builtin.command: defaults write com.apple.dock "static-only" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.dock "static-only" -bool "true" && killall Dock
 
     # SCREENSHOTS Configuration
     - name: Set screenshot location
-      ansible.builtin.command: defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots"
+      ansible.builtin.shell: defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots" && killall SystemUIServer
 
     # FINDER Configuration
     - name: Show extensions in Finder
-      ansible.builtin.command: defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
+      ansible.builtin.shell: defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
 
     - name: Show hidden files in Finder
-      ansible.builtin.command: defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
 
     - name: Set Finder default view style to list
-      ansible.builtin.command: defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+      ansible.builtin.shell: defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv" && killall Finder
 
     - name: Keep folders on top in Finder
-      ansible.builtin.command: defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
 
     - name: Set Finder to empty trash automatically after 30 days
-      ansible.builtin.command: defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
 
     - name: Change file extension warning in Finder
-      ansible.builtin.command: defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+      ansible.builtin.shell: defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
 
     - name: Set Finder to save new documents to iCloud
-      ansible.builtin.command: defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
+      ansible.builtin.shell: defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
 
     - name: Set Finder sidebar icon size
-      ansible.builtin.command: defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "3"
+      ansible.builtin.shell: defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "3" && killall Finder
 
     # DESKTOP Configuration
     - name: Keep folders on top on Desktop
-      ansible.builtin.command: defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true" && killall Finder
 
     - name: Hide all icons on Desktop
-      ansible.builtin.command: defaults write com.apple.finder "CreateDesktop" -bool "false"
+      ansible.builtin.shell: defaults write com.apple.finder "CreateDesktop" -bool "false" && killall Finder
 
     # MENU BAR Configuration
     - name: Disable Music song notifications
-      ansible.builtin.command: defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false"
+      ansible.builtin.shell: defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false" && killall Music
 
     # MOUSE Configuration
     - name: Enable Focus Follow Mouse in Terminal
-      ansible.builtin.command: defaults write com.apple.Terminal "FocusFollowsMouse" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.Terminal "FocusFollowsMouse" -bool "true" && killall Terminal
 
     # KEYBOARD Configuration
     - name: Set Fn key usage to control
-      ansible.builtin.command: defaults write com.apple.HIToolbox AppleFnUsageType -int "2"
+      ansible.builtin.shell: defaults write com.apple.HIToolbox AppleFnUsageType -int "2"
 
     # MISSION CONTROL Configuration
     - name: Disable auto rearrange spaces in Mission Control
-      ansible.builtin.command: defaults write com.apple.dock "mru-spaces" -bool "false"
+      ansible.builtin.shell: defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
 
     - name: Group windows by application in Mission Control
-      ansible.builtin.command: defaults write com.apple.dock "expose-group-apps" -bool "true"
+      ansible.builtin.shell: defaults write com.apple.dock "expose-group-apps" -bool "true" && killall Dock
 
     # ACTIVITY MONITOR Configuration
     - name: Set Activity Monitor icon type to show CPU usage
-      ansible.builtin.command: defaults write com.apple.ActivityMonitor "IconType" -int "6"
+      ansible.builtin.shell: defaults write com.apple.ActivityMonitor "IconType" -int "6" && killall Activity\ Monitor
