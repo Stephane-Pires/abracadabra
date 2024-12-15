@@ -5,69 +5,149 @@
   tasks:
     # DOCK Configuration
     - name: Set dock icon size
-      ansible.builtin.shell: defaults write com.apple.dock "tilesize" -int "61" && killall Dock
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: tilesize
+        type: int
+        value: 61
 
     - name: Set minimize animation effect to scale
-      ansible.builtin.shell: defaults write com.apple.dock "mineffect" -string "scale" && killall Dock
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: mineffect
+        type: string
+        value: scale
 
     - name: Set active applications only in dock
-      ansible.builtin.shell: defaults write com.apple.dock "static-only" -bool "true" && killall Dock
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: static-only
+        type: bool
+        value: true
 
     # SCREENSHOTS Configuration
     - name: Set screenshot location
-      ansible.builtin.shell: defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots" && killall SystemUIServer
+      community.general.osx_defaults:
+        domain: com.apple.screencapture
+        key: location
+        type: string
+        value: ~/Pictures/Screenshots
 
     # FINDER Configuration
     - name: Show extensions in Finder
-      ansible.builtin.shell: defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleShowAllExtensions
+        type: bool
+        value: true
 
     - name: Show hidden files in Finder
-      ansible.builtin.shell: defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: AppleShowAllFiles
+        type: bool
+        value: true
 
     - name: Set Finder default view style to list
-      ansible.builtin.shell: defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: FXPreferredViewStyle
+        type: string
+        value: Nlsv
 
     - name: Keep folders on top in Finder
-      ansible.builtin.shell: defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: _FXSortFoldersFirst
+        type: bool
+        value: true
 
     - name: Set Finder to empty trash automatically after 30 days
-      ansible.builtin.shell: defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: FXRemoveOldTrashItems
+        type: bool
+        value: true
 
     - name: Change file extension warning in Finder
-      ansible.builtin.shell: defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: FXEnableExtensionChangeWarning
+        type: bool
+        value: false
 
     - name: Set Finder to save new documents to iCloud
-      ansible.builtin.shell: defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSDocumentSaveNewDocumentsToCloud
+        type: bool
+        value: false
 
     - name: Set Finder sidebar icon size
-      ansible.builtin.shell: defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "3" && killall Finder
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSTableViewDefaultSizeMode
+        type: int
+        value: 3
 
     # DESKTOP Configuration
     - name: Keep folders on top on Desktop
-      ansible.builtin.shell: defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: _FXSortFoldersFirstOnDesktop
+        type: bool
+        value: true
 
     - name: Hide all icons on Desktop
-      ansible.builtin.shell: defaults write com.apple.finder "CreateDesktop" -bool "false" && killall Finder
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: CreateDesktop
+        type: bool
+        value: false
 
     # MENU BAR Configuration
     - name: Disable Music song notifications
-      ansible.builtin.shell: defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false" && killall Music
+      community.general.osx_defaults:
+        domain: com.apple.Music
+        key: userWantsPlaybackNotifications
+        type: bool
+        value: false
 
     # MOUSE Configuration
     - name: Enable Focus Follow Mouse in Terminal
-      ansible.builtin.shell: defaults write com.apple.Terminal "FocusFollowsMouse" -bool "true" && killall Terminal
+      community.general.osx_defaults:
+        domain: com.apple.Terminal
+        key: FocusFollowsMouse
+        type: bool
+        value: true
 
     # KEYBOARD Configuration
     - name: Set Fn key usage to control
-      ansible.builtin.shell: defaults write com.apple.HIToolbox AppleFnUsageType -int "2"
+      community.general.osx_defaults:
+        domain: com.apple.HIToolbox
+        key: AppleFnUsageType
+        type: int
+        value: 2
 
     # MISSION CONTROL Configuration
     - name: Disable auto rearrange spaces in Mission Control
-      ansible.builtin.shell: defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: mru-spaces
+        type: bool
+        value: false
 
     - name: Group windows by application in Mission Control
-      ansible.builtin.shell: defaults write com.apple.dock "expose-group-apps" -bool "true" && killall Dock
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: expose-group-apps
+        type: bool
+        value: true
 
     # ACTIVITY MONITOR Configuration
     - name: Set Activity Monitor icon type to show CPU usage
-      ansible.builtin.shell: defaults write com.apple.ActivityMonitor "IconType" -int "6" && killall Activity\ Monitor
+      community.general.osx_defaults:
+        domain: com.apple.ActivityMonitor
+        key: IconType
+        type: int
+        value: 6
