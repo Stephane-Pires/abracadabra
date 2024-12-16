@@ -1,4 +1,4 @@
 ---
-- import_playbook: playbooks/folder-tree.yml
-- import_playbook: playbooks/macos-configuration.yml
-- import_playbook: playbooks/tools.yml
+- import_playbook: roles/folder-tree.yml
+- import_playbook: roles/macos-configuration.yml
+- import_playbook: roles/tools.yml
