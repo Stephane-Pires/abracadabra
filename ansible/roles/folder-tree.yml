@@ -1,14 +1,13 @@
 ---
 - name: Create folder tree structure
   hosts: localhost
-  become: true
   tasks:
     - name: Create folders in the operating system
       ansible.builtin.file:
         path: "{{ item.path }}"
         state: directory
         mode: "{{ item.mode | default('0755') }}"
-        owner: "{{ item.owner | default('root') }}"
+        owner: "{{ item.owner }}"
       loop:
         - path: "{{ ansible_env.HOME }}/Documents/Projects"
           owner: "{{ ansible_env.USER }}"
