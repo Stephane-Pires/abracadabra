@@ -1,7 +1,6 @@
 ---
 - name: Install dotfiles
   hosts: localhost
-  become: true
   tasks:
     # Ensure the dotfiles directory exists
     # - name: Ensure dotfiles directory exists

@@ -1,7 +1,6 @@
 ---
 - name: MacOS configuration
   hosts: localhost
-  become: true
   tasks:
     # DOCK Configuration
     - name: Set dock icon size
