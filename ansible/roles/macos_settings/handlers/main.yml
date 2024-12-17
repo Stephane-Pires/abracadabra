@@ -1,0 +1,27 @@
+---
+- name: Kill Dock
+  ansible.builtin.command: killall Dock
+  changed_when: false
+
+- name: Kill Finder
+  ansible.builtin.command: killall Finder
+  changed_when: false
+
+- name: Kill Music
+  ansible.builtin.command: killall Music
+  changed_when: false
+
+- name: Kill Terminal
+  ansible.builtin.command: killall Terminal
+  changed_when: false
+
+- name: Kill Activity Monitor
+  ansible.builtin.command: killall Activity\ Monitor
+  changed_when: false
+# - name: Kill SystemUIServer
+#   ansible.builtin.command: killall SystemUIServer
+#   changed_when: false
+
+# - name: Kill WallpaperAgent
+#   ansible.builtin.command: killall WallpaperAgent
+#   changed_when: false

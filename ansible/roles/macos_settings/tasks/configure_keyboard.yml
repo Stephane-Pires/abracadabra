@@ -1,0 +1,6 @@
+- name: Set Fn key usage to control
+  community.general.osx_defaults:
+    domain: com.apple.HIToolbox
+    key: AppleFnUsageType
+    type: int
+    value: 2

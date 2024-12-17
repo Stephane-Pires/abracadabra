@@ -1,0 +1,7 @@
+- name: Set Activity Monitor icon type to show CPU usage
+  community.general.osx_defaults:
+    domain: com.apple.ActivityMonitor
+    key: IconType
+    type: int
+    value: 6
+  notify: Kill Activity Monitor

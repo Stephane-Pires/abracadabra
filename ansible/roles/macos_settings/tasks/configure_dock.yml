@@ -1,0 +1,41 @@
+# DOCK Configuration
+- name: Set dock icon size
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 61
+  notify: Kill Dock
+
+- name: Set minimize animation effect to scale
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: mineffect
+    type: string
+    value: scale
+  notify: Kill Dock
+
+- name: Set active applications only in dock
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: static-only
+    type: bool
+    value: true
+  notify: Kill Dock
+
+# MISSION CONTROL Configuration
+- name: Disable auto rearrange spaces in Mission Control
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: mru-spaces
+    type: bool
+    value: false
+  notify: Kill Dock
+
+- name: Group windows by application in Mission Control
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: expose-group-apps
+    type: bool
+    value: true
+  notify: Kill Dock

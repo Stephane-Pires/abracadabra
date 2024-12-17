@@ -1,0 +1,8 @@
+# MENU BAR Configuration
+- name: Disable Music song notifications
+  community.general.osx_defaults:
+    domain: com.apple.Music
+    key: userWantsPlaybackNotifications
+    type: bool
+    value: false
+  notify: Kill Music

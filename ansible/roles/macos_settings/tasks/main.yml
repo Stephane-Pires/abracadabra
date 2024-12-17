@@ -1,0 +1,24 @@
+---
+- name: Setup Dock
+  ansible.builtin.include_tasks: configure_dock.yml
+
+- name: Setup Finder
+  ansible.builtin.include_tasks: configure_finder.yml
+
+- name: Setup Keyboard
+  ansible.builtin.include_tasks: configure_keyboard.yml
+
+- name: Setup Monitor
+  ansible.builtin.include_tasks: configure_monitor.yml
+
+- name: Setup Music
+  ansible.builtin.include_tasks: configure_music.yml
+
+- name: Setup ScreenCapture
+  ansible.builtin.include_tasks: configure_screencapture.yml
+
+- name: Setup Terminal
+  ansible.builtin.include_tasks: configure_terminal.yml
+
+- name: Flush handlers
+  ansible.builtin.meta: flush_handlers

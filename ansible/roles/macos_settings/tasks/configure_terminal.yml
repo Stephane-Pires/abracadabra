@@ -1,0 +1,7 @@
+- name: Enable Focus Follow Mouse in Terminal
+  community.general.osx_defaults:
+    domain: com.apple.Terminal
+    key: FocusFollowsMouse
+    type: bool
+    value: true
+  notify: Kill Terminal
