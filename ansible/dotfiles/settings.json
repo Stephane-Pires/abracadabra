@@ -1,0 +1,79 @@
+{
+  "window.zoomLevel": 1,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Apollo Midnight",
+  "workbench.iconTheme": "vscode-icons",
+  // Editor settings (fonts, brackets, )
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.fontFamily": "MonoLisa, Fira Code, Monaco, 'Courier New', monospace",
+  // "editor.fontLigatures": true,
+  "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' on, 'ss02' on",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "editor.formatOnSave": true,
+  "editor.largeFileOptimizations": false,
+  "editor.fontSize": 15,
+  "editor.renderWhitespace": "all",
+  "editor.accessibilitySupport": "off",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.validate": ["javascript", "svelte"],
+  // "eslint.experimental.useFlatConfig": true,
+  "redhat.telemetry.enabled": true,
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "svelte.enable-ts-plugin": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescript": true,
+    "javascript": true,
+    "svelte": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "gitlens.defaultGravatarsStyle": "retro",
+  "gitlens.graph.minimap.enabled": false,
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
+  "inlang.userId": "e74748d2-a94e-4d14-8a97-9eab1b08b133",
+  "sherlock.userId": "e74748d2-a94e-4d14-8a97-9eab1b08b133",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "vsicons.presets.foldersAllDefaultIcon": true,
+  "vitest.debugExclude": ["<node_internals>/**", "**/node_modules/**"],
+  "vscode-pets.petSize": "small",
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petType": "totoro",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "jupyter.askForKernelRestart": false
+}
