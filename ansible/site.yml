@@ -7,6 +7,6 @@
 - name: Configure macOS
   hosts: localhost
   roles:
-    - { role: folder-tree }
+    - { role: folder_tree }
     - { role: macos_settings }
     - { role: zsh }

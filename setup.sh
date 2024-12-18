@@ -18,6 +18,12 @@ set -e  # Exit immediately if a command exits with a non-zero status.
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
+
+## Source the env
+    echo "Sourcing the Zsh..."
+    source ~/.zprofile
+
+
 ## Install Brewfile
     echo "Installing Brewfile..."
     brew bundle install
