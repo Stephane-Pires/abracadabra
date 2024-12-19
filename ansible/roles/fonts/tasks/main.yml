@@ -1,0 +1,16 @@
+- name: Install multiple fonts on macOS
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "~/Library/Fonts/"
+    mode: "0644"
+  loop:
+    - "{{ playbook_dir }}/fonts/MonoLisa-Bold.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-BoldItalic.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-Light.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-LightItalic.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-Medium.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-MediumItalic.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-Regular.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-RegularItalic.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-SemiBold.ttf"
+    - "{{ playbook_dir }}/fonts/MonoLisa-SemiBoldItalic.ttf"

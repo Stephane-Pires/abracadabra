@@ -1,8 +1,3 @@
-# ---
-# - import_playbook: roles/folder-tree.yml
-# - import_playbook: roles/macos-configuration/tasks/main.yml
-# - import_playbook: roles/tools.yml
-
 ---
 - name: Configure macOS
   hosts: localhost
@@ -10,3 +5,4 @@
     - { role: folder_tree }
     - { role: macos_settings }
     - { role: zsh }
+    - { role: fonts }
