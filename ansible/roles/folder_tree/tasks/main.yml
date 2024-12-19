@@ -1,18 +1,16 @@
 ---
-- name: Create folder tree structure
-  tasks:
-    - name: Create folders in the operating system
-      ansible.builtin.file:
-        path: "{{ item.path }}"
-        state: directory
-        mode: "{{ item.mode | default('0755') }}"
-        owner: "{{ item.owner }}"
-      loop:
-        - path: "{{ ansible_env.HOME }}/Documents/Projects"
-          owner: "{{ ansible_env.USER }}"
-        - path: "{{ ansible_env.HOME }}/Documents/Rapports"
-          owner: "{{ ansible_env.USER }}"
-        - path: "{{ ansible_env.HOME }}/Documents/RunJS"
-          owner: "{{ ansible_env.USER }}"
-        - path: "{{ ansible_env.HOME }}/Pictures/Screenshots"
-          owner: "{{ ansible_env.USER }}"
+- name: Create folders in the operating system
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: directory
+    mode: "{{ item.mode | default('0755') }}"
+    owner: "{{ item.owner }}"
+  loop:
+    - path: "{{ ansible_env.HOME }}/Documents/Projects"
+      owner: "{{ ansible_env.USER }}"
+    - path: "{{ ansible_env.HOME }}/Documents/Rapports"
+      owner: "{{ ansible_env.USER }}"
+    - path: "{{ ansible_env.HOME }}/Documents/RunJS"
+      owner: "{{ ansible_env.USER }}"
+    - path: "{{ ansible_env.HOME }}/Pictures/Screenshots"
+      owner: "{{ ansible_env.USER }}"

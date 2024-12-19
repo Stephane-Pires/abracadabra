@@ -1,7 +1,5 @@
-- name: Install tools and configure environment
-  tasks:
-    - name: Install Oh My Zsh
-      ansible.builtin.shell: |
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-      args:
-        creates: ~/.oh-my-zsh
+- name: Install Oh My Zsh
+  ansible.builtin.shell: |
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  args:
+    creates: ~/.oh-my-zsh
