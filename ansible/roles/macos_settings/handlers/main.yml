@@ -10,6 +10,7 @@
 - name: Kill Music
   ansible.builtin.command: killall Music
   changed_when: false
+  failed_when: false
 
 - name: Kill Terminal
   ansible.builtin.command: killall Terminal
