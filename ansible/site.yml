@@ -6,3 +6,4 @@
     - { role: macos_settings }
     - { role: zsh }
     - { role: fonts }
+    - { role: dotfiles }

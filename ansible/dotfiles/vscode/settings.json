@@ -11,7 +11,6 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.minimap.renderCharacters": false,
   "editor.fontFamily": "MonoLisa, Fira Code, Monaco, 'Courier New', monospace",
-  // "editor.fontLigatures": true,
   "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' on, 'ss02' on",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -48,7 +47,6 @@
   ],
   "eslint.validate": ["javascript", "svelte"],
   // "eslint.experimental.useFlatConfig": true,
-  "redhat.telemetry.enabled": true,
   "playwright.reuseBrowser": true,
   "playwright.showTrace": false,
   "svelte.enable-ts-plugin": true,
@@ -64,10 +62,6 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "gitlens.defaultGravatarsStyle": "retro",
   "gitlens.graph.minimap.enabled": false,
-  "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
-  "inlang.userId": "e74748d2-a94e-4d14-8a97-9eab1b08b133",
-  "sherlock.userId": "e74748d2-a94e-4d14-8a97-9eab1b08b133",
   "material-icon-theme.hidesExplorerArrows": false,
   "vsicons.presets.foldersAllDefaultIcon": true,
   "vitest.debugExclude": ["<node_internals>/**", "**/node_modules/**"],

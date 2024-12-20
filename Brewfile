@@ -20,6 +20,8 @@ brew "gcc"
 brew "openblas"
 brew "ansible"
 brew "git"
+brew "fzf"
+brew "powerlevel10k"
 
 ## Conversion de fichiers
 # brew "osm2pgsql"
@@ -39,6 +41,7 @@ brew "docker-compose"
 brew "terraform"
 brew "httpie"
 brew "volta"
+brew "jq"
 brew "ansible-lint"
 
 # brew "libpq"
