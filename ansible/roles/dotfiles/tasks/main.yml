@@ -1,5 +1,11 @@
 ---
-- name: Ensure VSCode config directory exists
+- name: Ensure VSCode root directory exists
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/Library/Application Support/Code/User"
+    state: directory
+    mode: "0755"
+
+- name: Ensure VSCode user profile directory exists
   ansible.builtin.file:
     path: "{{ ansible_user_dir }}/Library/Application Support/Code/User/Profiles/{{ ansible_env.USER }}"
     state: directory
