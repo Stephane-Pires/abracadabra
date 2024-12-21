@@ -17,6 +17,12 @@
     dest: "{{ ansible_user_dir }}/Library/Application Support/Code/User/keybindings.json"
     mode: "0644"
 
+- name: Replace .zshrc with custom configuration
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/dotfiles/.zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    mode: "0644"
+
 - name: Notify user of successful configuration
   ansible.builtin.debug:
     msg: "VSCode configuration successfully deployed!"
