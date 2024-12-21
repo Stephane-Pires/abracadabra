@@ -22,6 +22,7 @@ brew "ansible"
 brew "git"
 brew "fzf"
 brew "powerlevel10k"
+brew "zsh-autosuggestions"
 
 ## Conversion de fichiers
 # brew "osm2pgsql"
@@ -73,6 +74,7 @@ cask "gitkraken"
 # cask "warp"
 cask "kitty"
 cask "runjs"
+
 
 ## Extension VSCODE
 vscode "apollographql.apollo-midnight-color-theme"
