@@ -4,4 +4,4 @@
     key: FocusFollowsMouse
     type: bool
     value: true
-  notify: Kill Terminal
+  # notify: Kill Terminal

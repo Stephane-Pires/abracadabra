@@ -7,3 +7,4 @@
     - { role: zsh }
     - { role: fonts }
     - { role: dotfiles }
+    - { role: secrets }
