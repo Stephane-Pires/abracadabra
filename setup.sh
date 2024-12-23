@@ -30,5 +30,5 @@ set -e  # Exit immediately if a command exits with a non-zero status.
 
 ## Run Ansible 
     echo "Running Ansible..."
-    ansible-pull -U https://github.com/Stephane-Pires/abracadabra.git -C main ansible/site.yml
+    ansible-pull -U https://github.com/Stephane-Pires/abracadabra.git -C main ansible/site.yml --ask-vault-pass
 
