@@ -12,6 +12,10 @@ Download the bash script that install the system `init.sh`
 
 The following tools required manual steps to be completly configured
 
+### Secrets
+
+create a `vault_pass.txt` at user root path with the vault password inside
+
 ### Yabai
 
 - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#updating-to-the-latest-release
