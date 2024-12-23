@@ -14,7 +14,7 @@ The following tools required manual steps to be completly configured
 
 ### Secrets
 
-create a `vault_pass.txt` at user root path with the vault password inside
+create a `.vault_pass.txt` at user root path with the vault password inside
 
 ### Yabai
 
