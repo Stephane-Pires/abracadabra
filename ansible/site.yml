@@ -8,3 +8,4 @@
     - { role: fonts }
     - { role: dotfiles }
     - { role: secrets }
+    - { role: projects }

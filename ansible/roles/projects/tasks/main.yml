@@ -1,0 +1,41 @@
+---
+- name: Ensure git is installed
+  ansible.builtin.package:
+    name: git
+    state: present
+
+- name: Clone Mono (Tesouro)
+  ansible.builtin.git:
+    repo: git@github.com-perso:Stephane-Pires/mono.git
+    dest: "{{ ansible_env.HOME }}/Documents/Projects"
+    version: "main" # Replace with the desired branch or tag
+
+- name: Set permissions for the cloned directory
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Documents/Projects/mono"
+    state: directory
+    mode: "0755"
+
+- name: Clone Abracadabra
+  ansible.builtin.git:
+    repo: git@github.com-perso:Stephane-Pires/abracadabra.git
+    dest: "{{ ansible_env.HOME }}/Documents/Projects"
+    version: "main" # Replace with the desired branch or tag
+
+- name: Set permissions for the cloned directory
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Documents/Projects/abracadabra"
+    state: directory
+    mode: "0755"
+
+- name: Clone Caravel
+  ansible.builtin.git:
+    repo: git@github.com-perso:Stephane-Pires/caravel.git
+    dest: "{{ ansible_env.HOME }}/Documents/Projects"
+    version: "main" # Replace with the desired branch or tag
+
+- name: Set permissions for the cloned directory
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Documents/Projects/caravel"
+    state: directory
+    mode: "0755"
