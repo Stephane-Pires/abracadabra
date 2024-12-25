@@ -1,7 +1,8 @@
 # tap "flother/taps"
-# tap "hashicorp/tap"
-tap "homebrew/bundle"
 # tap "homebrew/cask-font" DEPRECATED
+tap "hashicorp/tap"
+tap "felixKratz/formulae"
+tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 # Utilitaires
@@ -23,6 +24,7 @@ brew "git"
 brew "fzf"
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
+brew "felixkratz/formulae/borders"
 brew "koekeishiya/formulae/yabai"
 
 ## Conversion de fichiers

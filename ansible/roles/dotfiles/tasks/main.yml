@@ -40,4 +40,4 @@
 
 - name: Notify user of successful configuration
   ansible.builtin.debug:
-    msg: "Zsh configuration successfully deployed!"
+    msg: "Yabai configuration successfully deployed!"
