@@ -17,6 +17,10 @@
     dest: "{{ ansible_user_dir }}/Library/Application Support/Code/User/keybindings.json"
     mode: "0644"
 
+- name: Notify user of successful configuration
+  ansible.builtin.debug:
+    msg: "VSCode configuration successfully deployed!"
+
 - name: Replace .zshrc with custom configuration
   ansible.builtin.copy:
     src: "{{ playbook_dir }}/dotfiles/.zshrc"
@@ -25,4 +29,15 @@
 
 - name: Notify user of successful configuration
   ansible.builtin.debug:
-    msg: "VSCode configuration successfully deployed!"
+    msg: "Zsh configuration successfully deployed!"
+
+- name: Replace Yabai with custom configuration
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/dotfiles/yabairc"
+    dest: "{{ ansible_user_dir }}/config/yabai/yabairc"
+    mode: "0644"
+  notify: Start Yabai
+
+- name: Notify user of successful configuration
+  ansible.builtin.debug:
+    msg: "Zsh configuration successfully deployed!"

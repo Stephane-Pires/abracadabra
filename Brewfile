@@ -3,7 +3,7 @@
 tap "homebrew/bundle"
 # tap "homebrew/cask-font" DEPRECATED
 tap "homebrew/services"
-# tap "koekeishiya/formulae"
+tap "koekeishiya/formulae"
 # Utilitaires
 ## Media (Vidéo, Audio, Image)
 # brew "jpeg-xl"
@@ -23,6 +23,7 @@ brew "git"
 brew "fzf"
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
+brew "koekeishiya/formulae/yabai"
 
 ## Conversion de fichiers
 # brew "osm2pgsql"
@@ -35,7 +36,6 @@ brew "zsh-autosuggestions"
 # brew "pango"
 # brew "numpy" # This shouldn't be installed globally
 # brew "flother/taps/spreet"
-# brew "koekeishiya/formulae/yabai"
 
 # Outils de développement
 brew "docker-compose"

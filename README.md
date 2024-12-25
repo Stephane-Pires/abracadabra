@@ -14,11 +14,13 @@ The following tools required manual steps to be completly configured
 
 ### Secrets
 
-create a `.vault_pass.txt` at user root path with the vault password inside
+Create a `.vault_pass.txt` at user root path with the vault password inside
 
 ### Yabai
 
 - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#updating-to-the-latest-release
+
+- https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection
 
 ## Ressources
 
