@@ -41,3 +41,13 @@
 - name: Notify user of successful configuration
   ansible.builtin.debug:
     msg: "Yabai configuration successfully deployed!"
+
+- name: Replace kitty.conf with custom configuration
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/dotfiles/kitty.conf"
+    dest: "{{ ansible_user_dir }}/config/kitty/kitty.conf"
+    mode: "0644"
+
+- name: Notify user of successful configuration
+  ansible.builtin.debug:
+    msg: "Kitty configuration successfully deployed!"

@@ -16,3 +16,5 @@
       owner: "{{ ansible_env.USER }}"
     - path: "{{ ansible_env.HOME }}/config/yabai"
       owner: "{{ ansible_env.USER }}"
+    - path: "{{ ansible_env.HOME }}/config/kitty"
+      owner: "{{ ansible_env.USER }}"
