@@ -1,10 +1,10 @@
 # tap "flother/taps"
-# tap "homebrew/cask-font" DEPRECATED
 tap "hashicorp/tap"
 tap "felixKratz/formulae"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+
 # Utilitaires
 ## Media (Vidéo, Audio, Image)
 # brew "jpeg-xl"
@@ -26,11 +26,6 @@ brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "felixkratz/formulae/borders"
 brew "koekeishiya/formulae/yabai"
-
-## Conversion de fichiers
-# brew "osm2pgsql"
-# brew "osmium-tool"
-# brew "parquet-cli"
 
 ## ???
 # brew "tesseract"

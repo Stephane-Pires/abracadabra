@@ -9,3 +9,4 @@
     - { role: dotfiles }
     - { role: secrets }
     - { role: projects }
+    - { role: clean_up }

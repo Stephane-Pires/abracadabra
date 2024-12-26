@@ -1,0 +1,20 @@
+- name: Check if .vault_pass.txt exists
+  ansible.builtin.stat:
+    path: ~/.vault_pass.txt
+  register: vault_pass_file
+
+- name: Remove .vault_pass.txt if it exists
+  ansible.builtin.file:
+    path: ~/.vault_pass.txt
+    state: absent
+  when: vault_pass_file.stat.exists
+
+- name: Display message if .vault_pass.txt was removed
+  ansible.builtin.debug:
+    msg: ".vault_pass.txt has been removed."
+  when: vault_pass_file.stat.exists
+
+- name: Display message if .vault_pass.txt does not exist
+  ansible.builtin.debug:
+    msg: ".vault_pass.txt does not exist."
+  when: not vault_pass_file.stat.exists
