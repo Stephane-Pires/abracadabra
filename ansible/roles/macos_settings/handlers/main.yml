@@ -19,6 +19,7 @@
 - name: Kill Activity Monitor
   ansible.builtin.command: killall Activity\ Monitor
   changed_when: false
+  failed_when: false
 # - name: Kill SystemUIServer
 #   ansible.builtin.command: killall SystemUIServer
 #   changed_when: false
