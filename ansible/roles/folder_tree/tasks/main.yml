@@ -18,3 +18,11 @@
       owner: "{{ ansible_env.USER }}"
     - path: "{{ ansible_env.HOME }}/config/kitty"
       owner: "{{ ansible_env.USER }}"
+
+- name: Set recursive permissions for Documents
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Documents"
+    state: directory
+    mode: "0755"
+    recurse: true
+    owner: "{{ ansible_env.USER }}"
