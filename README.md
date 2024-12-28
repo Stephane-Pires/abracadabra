@@ -4,7 +4,7 @@
 
 ## Run
 
-Download the bash script that install the system `init.sh`
+Download the bash script that install the system `setup.sh`
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Stephane-Pires/abracadabra/refs/heads/main/setup.sh)"`
 
