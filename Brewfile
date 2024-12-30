@@ -41,6 +41,7 @@ brew "httpie"
 brew "volta"
 brew "jq"
 brew "ansible-lint"
+brew "uv"
 
 # brew "libpq"
 # brew "openjdk@11"
