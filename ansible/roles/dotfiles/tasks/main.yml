@@ -34,7 +34,7 @@
 - name: Replace Yabai with custom configuration
   ansible.builtin.copy:
     src: "{{ playbook_dir }}/dotfiles/yabairc"
-    dest: "{{ ansible_user_dir }}/config/yabai/yabairc"
+    dest: "{{ ansible_user_dir }}/.config/yabai/yabairc"
     mode: "0644"
   notify: Start Yabai
 
@@ -45,7 +45,17 @@
 - name: Replace kitty.conf with custom configuration
   ansible.builtin.copy:
     src: "{{ playbook_dir }}/dotfiles/kitty.conf"
-    dest: "{{ ansible_user_dir }}/config/kitty/kitty.conf"
+    dest: "{{ ansible_user_dir }}/.config/kitty/kitty.conf"
+    mode: "0644"
+
+- name: Notify user of successful configuration
+  ansible.builtin.debug:
+    msg: "Kitty configuration successfully deployed!"
+
+- name: Replace kitty.conf with custom configuration
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/dotfiles/starship.toml"
+    dest: "{{ ansible_user_dir }}/.config/startship.toml"
     mode: "0644"
 
 - name: Notify user of successful configuration

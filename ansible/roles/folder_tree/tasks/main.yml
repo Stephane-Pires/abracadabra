@@ -14,9 +14,9 @@
       owner: "{{ ansible_env.USER }}"
     - path: "{{ ansible_env.HOME }}/Pictures/Screenshots"
       owner: "{{ ansible_env.USER }}"
-    - path: "{{ ansible_env.HOME }}/config/yabai"
+    - path: "{{ ansible_env.HOME }}/.config/yabai"
       owner: "{{ ansible_env.USER }}"
-    - path: "{{ ansible_env.HOME }}/config/kitty"
+    - path: "{{ ansible_env.HOME }}/.config/kitty"
       owner: "{{ ansible_env.USER }}"
 
 - name: Set recursive permissions for Documents

@@ -4,4 +4,4 @@
 
 - [ ] : Install, configure, document Yabai (Needs a real computer to deactivate SIP)
 - [x] : Install, configure, document PowerLevel10k + fzf
-- [ ] : Clean task at the end
+- [x] : Clean task at the end
