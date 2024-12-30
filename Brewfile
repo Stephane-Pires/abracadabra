@@ -69,7 +69,6 @@ cask "docker"
 cask "visual-studio-code"
 cask "httpie"
 cask "gitkraken"
-# cask "warp"
 cask "kitty"
 cask "runjs"
 
