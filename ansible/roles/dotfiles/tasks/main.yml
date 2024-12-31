@@ -55,7 +55,7 @@
 - name: Replace kitty.conf with custom configuration
   ansible.builtin.copy:
     src: "{{ playbook_dir }}/dotfiles/starship.toml"
-    dest: "{{ ansible_user_dir }}/.config/startship.toml"
+    dest: "{{ ansible_user_dir }}/.config/starship.toml"
     mode: "0644"
 
 - name: Notify user of successful configuration
