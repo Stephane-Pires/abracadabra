@@ -18,3 +18,45 @@
   ansible.builtin.debug:
     msg: ".vault_pass.txt does not exist."
   when: not vault_pass_file.stat.exists
+
+- name: Check if Brewfile exists
+  ansible.builtin.stat:
+    path: ~/Brewfile
+  register: brewfile_file
+
+- name: Remove Brewfile if it exists
+  ansible.builtin.file:
+    path: ~/Brewfile
+    state: absent
+  when: brewfile_file.stat.exists
+
+- name: Display message if Brewfile was removed
+  ansible.builtin.debug:
+    msg: "Brewfile has been removed."
+  when: brewfile_file.stat.exists
+
+- name: Display message if Brewfile does not exist
+  ansible.builtin.debug:
+    msg: "Brewfile does not exist."
+  when: not brewfile_file.stat.exists
+
+- name: Check if setup.sh exists
+  ansible.builtin.stat:
+    path: ~/setup.sh
+  register: setup_file
+
+- name: Remove setup.sh if it exists
+  ansible.builtin.file:
+    path: ~/setup.sh
+    state: absent
+  when: setup_file.stat.exists
+
+- name: Display message if setup.sh was removed
+  ansible.builtin.debug:
+    msg: "setup.sh has been removed."
+  when: setup_file.stat.exists
+
+- name: Display message if setup.sh does not exist
+  ansible.builtin.debug:
+    msg: ".setup does not exist."
+  when: not setup_file.stat.exists
