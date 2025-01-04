@@ -26,7 +26,7 @@ brew "starship"
 brew "zsh-autosuggestions"
 brew "felixkratz/formulae/borders"
 brew "koekeishiya/formulae/yabai"
-
+brew "nmap"
 ## ???
 # brew "tesseract"
 # brew "openvino"
