@@ -1,5 +1,7 @@
 # Abracadabra
 
+![u7161273191_Image_with_magic_downloading__computer_terminal_k_3485fd7d-6f67-4d77-a428-d792b6a34da0_0](https://github.com/user-attachments/assets/bff02fe4-8318-4c9f-a56e-9ffbd6639426)
+
 ## Description
 
 ## Run
