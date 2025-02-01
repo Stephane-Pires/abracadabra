@@ -17,9 +17,15 @@
     dest: "{{ ansible_user_dir }}/Library/Application Support/Code/User/keybindings.json"
     mode: "0644"
 
+- name: Copy Zed settings.json
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/dotfiles/zed/settings.json"
+    dest: "{{ ansible_user_dir }}/.config/zed/settings.json"
+    mode: "0644"
+
 - name: Notify user of successful configuration
   ansible.builtin.debug:
-    msg: "VSCode configuration successfully deployed!"
+    msg: "Zed configuration successfully deployed!"
 
 - name: Replace .zshrc with custom configuration
   ansible.builtin.copy:
@@ -31,16 +37,15 @@
   ansible.builtin.debug:
     msg: "Zsh configuration successfully deployed!"
 
-- name: Replace Yabai with custom configuration
+- name: Replace Aerospace with custom configuration
   ansible.builtin.copy:
-    src: "{{ playbook_dir }}/dotfiles/yabairc"
-    dest: "{{ ansible_user_dir }}/.config/yabai/yabairc"
+    src: "{{ playbook_dir }}/dotfiles/aerospace.toml"
+    dest: "{{ ansible_user_dir }}/.config/aerospace/aerospace.toml"
     mode: "0644"
-  notify: Start Yabai
 
 - name: Notify user of successful configuration
   ansible.builtin.debug:
-    msg: "Yabai configuration successfully deployed!"
+    msg: "Aerospace configuration successfully deployed!"
 
 - name: Replace kitty.conf with custom configuration
   ansible.builtin.copy:

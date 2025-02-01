@@ -20,5 +20,8 @@
 - name: Setup Terminal
   ansible.builtin.include_tasks: configure_terminal.yml
 
+- name: Setup Spaces
+  ansible.builtin.include_tasks: configure_space.yml
+
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers

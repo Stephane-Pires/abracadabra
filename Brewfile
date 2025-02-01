@@ -1,9 +1,7 @@
 # tap "flother/taps"
 tap "hashicorp/tap"
 tap "felixKratz/formulae"
-tap "homebrew/bundle"
-tap "homebrew/services"
-tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
 
 ## Développement (Securité, Connectivité, Utils, etc..)
 brew "boost"
@@ -14,11 +12,10 @@ brew "gcc"
 brew "openblas"
 brew "ansible"
 brew "git"
+brew "gh"
 brew "fzf"
-brew "starship" 
+brew "starship"
 brew "zsh-autosuggestions"
-brew "felixkratz/formulae/borders"
-brew "koekeishiya/formulae/yabai"
 brew "nmap"
 
 # Outils de développement
@@ -29,26 +26,30 @@ brew "volta"
 brew "jq"
 brew "ansible-lint"
 brew "uv"
+brew "awscli"
 
 # Applications
+cask "aerospace"
+cask "claude"
 
 ## Produit
 cask "linear-linear"
 cask "obs"
 cask "slack"
 cask "figma"
+cask "obsidian"
 cask "arc"
 
 ## Development
 cask "utm"
-cask "datagrip"
 cask "docker"
 cask "visual-studio-code"
 cask "httpie"
 cask "gitkraken"
 cask "kitty"
 cask "runjs"
-
+cask "zed"
+cask "claude-code"
 
 ## Extension VSCODE
 vscode "apollographql.apollo-midnight-color-theme"
@@ -79,4 +80,5 @@ vscode "DavidAnson.vscode-markdownlint"
 vscode "christian-kohler.npm-intellisense"
 vscode "ckolkman.vscode-postgres"
 vscode "tamasfe.even-better-toml"
-vscoode "typespec.typespec-vscode"
+vscode "typespec.typespec-vscode"
+vscode "wix.vscode-import-cost"

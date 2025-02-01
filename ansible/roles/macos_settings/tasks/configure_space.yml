@@ -1,0 +1,7 @@
+# SPACES Configuration
+- name: Disable space
+  community.general.osx_defaults:
+    domain: com.apple.spaces
+    key: spans-displays
+    type: boolean
+    value: false

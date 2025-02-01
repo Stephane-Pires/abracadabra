@@ -2,6 +2,6 @@
 
 - [x] : Handler for Ansible macos-configuration
 
-- [ ] : Install, configure, document Yabai (Needs a real computer to deactivate SIP)
+- [x] : Install, configure, document Yabai (Needs a real computer to deactivate SIP) ==> Remove to use aerospace instead
 - [x] : Install, configure, document PowerLevel10k + fzf
 - [x] : Clean task at the end

@@ -42,3 +42,16 @@
     state: directory
     mode: "0755"
     recurse: true
+
+- name: Clone Obsidian
+  ansible.builtin.git:
+    repo: git@github.com-perso:Stephane-Pires/obsidian.git
+    dest: "{{ ansible_env.HOME }}/Documents/Obsidian"
+    version: "main"
+
+- name: Set permissions for the cloned directory
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Documents/Projects/abracadabra"
+    state: directory
+    mode: "0755"
+    recurse: true
