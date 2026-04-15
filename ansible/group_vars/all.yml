@@ -1,0 +1,3 @@
+---
+# Default profile. Override at runtime with: ansible-pull ... -e profile=professional
+profile: personal

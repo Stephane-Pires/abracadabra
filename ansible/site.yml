@@ -7,6 +7,6 @@
     - { role: zsh }
     - { role: fonts }
     - { role: dotfiles }
-    - { role: secrets }
-    - { role: projects }
+    - { role: secrets,  when: profile == 'personal' }
+    - { role: projects, when: profile == 'personal' }
     - { role: clean_up }

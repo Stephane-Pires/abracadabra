@@ -1,0 +1,53 @@
+tap "hashicorp/tap"
+tap "nikitabobko/tap"
+
+## Développement
+brew "ansible"
+brew "git"
+brew "gh"
+brew "fzf"
+brew "starship"
+brew "zsh-autosuggestions"
+
+# Outils de développement
+brew "docker-compose"
+brew "terraform"
+brew "httpie"
+brew "volta"
+brew "jq"
+brew "awscli"
+
+# Applications
+cask "aerospace"
+cask "claude"
+
+## Produit
+cask "linear-linear"
+cask "obs"
+cask "slack"
+cask "figma"
+cask "obsidian"
+cask "arc"
+
+## Development
+cask "docker"
+cask "visual-studio-code"
+cask "httpie"
+cask "kitty"
+cask "runjs"
+cask "zed"
+cask "claude-code"
+
+## Extension VSCODE
+vscode "apollographql.apollo-midnight-color-theme"
+vscode "eamodio.gitlens"
+vscode "bierner.markdown-mermaid"
+vscode "ms-playwright.playwright"
+vscode "esbenp.prettier-vscode"
+vscode "YoavBls.pretty-ts-errors"
+vscode "bradlc.vscode-tailwindcss"
+vscode "vitest.explorer"
+vscode "vscode-icons-team.vscode-icons"
+vscode "DavidAnson.vscode-markdownlint"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "wix.vscode-import-cost"
