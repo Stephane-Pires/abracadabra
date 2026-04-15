@@ -11,7 +11,6 @@ brew "zsh-autosuggestions"
 
 # Outils de développement
 brew "docker-compose"
-brew "terraform"
 brew "httpie"
 brew "volta"
 brew "jq"
